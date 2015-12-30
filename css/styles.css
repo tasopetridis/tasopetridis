@@ -1,0 +1,173 @@
+/* Normals */
+
+html, body, h1, h2, p, img {
+	margin: 0;
+	padding: 0;
+	font-size: 62.5%;
+	background-color: black;
+
+	/* Animation: Fade */
+
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-timing: ease-in-out;
+	-webkit-animation-iteration-count: 1;
+	-webkit-animation-fill-mode: both;
+	-webkit-animation-delay: 0.35s;
+}
+
+/* Font Smoothie */
+
+html, html a {
+	-webkit-font-smoothing: antialiased !important;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+
+/* Typography */
+
+@font-face {
+ 	font-family: 'FaktSoftPro-Light';
+ 	src: url('../fonts/FaktSoftPro-Light.otf') format('otf');
+}
+
+@font-face {
+ 	font-family: 'FaktSoftPro-Normal';
+ 	src: url('../fonts/FaktSoftPro-Normal.otf') format('otf');
+}
+
+/* Clear Fix */
+
+.clearfix:after, .clearfix:before {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+/* Layout */
+
+.wrapper {
+	overflow-x: hidden;
+	padding-bottom: 200px;
+}
+
+.header, .brief, .carousel, .focus, .writings, .contact {
+	width: 900px;
+	margin: 0 auto;
+	padding: 200px 40px 0 40px;
+	-webkit-transition: all 0.2s ease-in;
+}
+
+@media all and (max-width: 1100px) {
+	.header, .brief, .carousel, .focus, .writings, .contact {
+		width: 600px;
+	}
+}
+
+@media all and (max-width: 800px) {
+	.header, .brief, .carousel, .focus, .writings, .contact {
+		width: 400px;
+	}
+}
+
+.slider {
+	min-width: 1600px;
+}
+
+.side {
+	width: 215px;
+	float: left;
+}
+
+.main {
+	width: 645px;
+	float: left;
+}
+
+@media all and (max-width: 1100px) {
+	.main {
+		width: 600px;
+	}
+}
+
+@media all and (max-width: 800px) {
+	.main {
+		width: 400px;
+	}
+}
+
+/* Styles */
+
+h1 {
+	font-family: 'FaktSoftPro-Light';
+	font-size: 5rem;
+	font-weight: normal;
+	color: white;
+}
+
+h2 {
+	font-family: 'FaktSoftPro-Normal';
+	font-size: 1.6rem;
+	font-weight: normal;
+	padding-bottom: 10px;
+	color: gray;
+}
+
+p {
+	font-family: 'FaktSoftPro-Normal';
+	font-size: 1.6rem;
+	font-weight: normal;
+	line-height: 2.6rem;
+	color: white;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+	-webkit-transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+	text-decoration: none;
+	-webkit-transition: all 0.2s ease-in;
+	-webkit-filter: blur(5px);
+}
+
+/* Images */
+
+.image {
+	width: 533px;
+	height: 533px;
+	background-size: 533px 533px;
+}
+
+.one {
+	background-image: url(../carousel/one.png);
+}
+
+.two {
+	background-image: url(../carousel/two.png);
+}
+
+.three {
+	background-image: url(../carousel/three.png);
+}
+
+/* Animation: Fade */
+
+@-webkit-keyframes fade {
+
+	0% {
+	
+		opacity: 0;
+		/*-webkit-transform: translateY(30px);*/
+		
+	}
+
+	100% {
+	
+		opacity: 1;
+		/*-webkit-transform: translateY(12px);*/
+		
+	}
+
+}
