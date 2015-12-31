@@ -1,3 +1,3 @@
-# tasopetridis
+# Taso Petridis
 
-personal website
+Personal
