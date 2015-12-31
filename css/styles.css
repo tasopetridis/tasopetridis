@@ -1,6 +1,6 @@
 /* Normals */
 
-html, body, h1, h2, p, img {
+html, body, h1, h2, p, img, ul, li {
 	margin: 0;
 	padding: 0;
 	font-size: 62.5%;
@@ -14,6 +14,13 @@ html, body, h1, h2, p, img {
 	-webkit-animation-iteration-count: 1;
 	-webkit-animation-fill-mode: both;
 	-webkit-animation-delay: 0.35s;
+	
+}
+
+/* Text Select */
+
+::selection {
+	background: lightgray;
 }
 
 /* Font Smoothie */
@@ -35,6 +42,16 @@ html, html a {
  	src: url('../fonts/FaktSoftPro-Normal.otf') format('otf');
 }
 
+@font-face {
+ 	font-family: 'CircularStd-Book';
+ 	src: url('../fonts/CircularStd-Book.otf') format('otf');
+}
+
+@font-face {
+ 	font-family: 'Bambino';
+ 	src: url('../fonts/Bambino.otf') format('otf');
+}
+
 /* Clear Fix */
 
 .clearfix:after, .clearfix:before {
@@ -47,109 +64,96 @@ html, html a {
 
 .wrapper {
 	overflow-x: hidden;
-	padding-bottom: 200px;
 }
 
-.header, .brief, .carousel, .focus, .writings, .contact {
-	width: 900px;
-	margin: 0 auto;
-	padding: 200px 40px 0 40px;
-	-webkit-transition: all 0.2s ease-in;
+.header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 800px;
+	height: 260px;
+	margin: auto;
+	-webkit-transition: all 0.2s ease;
 }
 
 @media all and (max-width: 1100px) {
-	.header, .brief, .carousel, .focus, .writings, .contact {
+	.header {
 		width: 600px;
+		height: 360px;
 	}
 }
 
 @media all and (max-width: 800px) {
-	.header, .brief, .carousel, .focus, .writings, .contact {
+	.header {
 		width: 400px;
-	}
-}
-
-.slider {
-	min-width: 1600px;
-}
-
-.side {
-	width: 215px;
-	float: left;
-}
-
-.main {
-	width: 645px;
-	float: left;
-}
-
-@media all and (max-width: 1100px) {
-	.main {
-		width: 600px;
-	}
-}
-
-@media all and (max-width: 800px) {
-	.main {
-		width: 400px;
+		height: 520px;
 	}
 }
 
 /* Styles */
 
 h1 {
-	font-family: 'FaktSoftPro-Light';
-	font-size: 5rem;
+	font-family: 'Bambino';
+	font-size: 4.6rem;
 	font-weight: normal;
-	color: white;
+	color: lightgray;
 }
 
-h2 {
-	font-family: 'FaktSoftPro-Normal';
-	font-size: 1.6rem;
-	font-weight: normal;
-	padding-bottom: 10px;
-	color: gray;
+ul {
+	display: block;
+	margin-top: 50px;
 }
 
-p {
-	font-family: 'FaktSoftPro-Normal';
+li {
+	display: inline;
+	font-family: 'Bambino';
 	font-size: 1.6rem;
 	font-weight: normal;
 	line-height: 2.6rem;
-	color: white;
+	color: lightgray;
+	list-style: none;
+	margin-right: 30px;
+}
+
+@media all and (max-width: 1100px) {
+	li {
+		display: block;
+		width: 600px;
+		height: 35px;
+		margin: 0;
+	}
+}
+
+@media all and (max-width: 800px) {
+	li {
+		display: block;
+		width: 400px;
+		height: 35px;
+		margin: 0;
+	}
+}
+
+li span {
+	font-family: 'Bambino';
+	font-size: 1.2rem;
+	font-weight: normal;
+	line-height: 2.6rem;
+	color: gray;
+	margin-right: 10px;
 }
 
 a {
-	color: white;
+	color: lightgray;
 	text-decoration: none;
-	-webkit-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease;
 }
 
 a:hover {
+	opacity: .75;
 	text-decoration: none;
-	-webkit-transition: all 0.2s ease-in;
-	-webkit-filter: blur(5px);
-}
-
-/* Images */
-
-.image {
-	width: 533px;
-	height: 533px;
-	background-size: 533px 533px;
-}
-
-.one {
-	background-image: url(../carousel/one.png);
-}
-
-.two {
-	background-image: url(../carousel/two.png);
-}
-
-.three {
-	background-image: url(../carousel/three.png);
+	-webkit-transition: all 0.2s ease;
 }
 
 /* Animation: Fade */
