@@ -1,10 +1,10 @@
 /* Normals */
 
-html, body, h1, h2, p, img, ul, li {
+html, body, h1, ul, li {
 	margin: 0;
 	padding: 0;
 	font-size: 62.5%;
-	background-color: black;
+	background-color: #ffd5d2;
 
 	/* Animation: Fade */
 
@@ -34,22 +34,22 @@ html, html a {
 
 @font-face {
  	font-family: 'FaktSoftPro-Light';
- 	src: url('../fonts/FaktSoftPro-Light.otf') format('otf');
+ 	src: url('../fonts/FaktSoftPro-Light.otf');
 }
 
 @font-face {
  	font-family: 'FaktSoftPro-Normal';
- 	src: url('../fonts/FaktSoftPro-Normal.otf') format('otf');
+ 	src: url('../fonts/FaktSoftPro-Normal.otf');
 }
 
 @font-face {
  	font-family: 'CircularStd-Book';
- 	src: url('../fonts/CircularStd-Book.otf') format('otf');
+ 	src: url('../fonts/CircularStd-Book.otf');
 }
 
 @font-face {
  	font-family: 'Bambino';
- 	src: url('../fonts/Bambino.otf') format('otf');
+ 	src: url('../fonts/Bambino.otf');
 }
 
 /* Clear Fix */
@@ -78,27 +78,13 @@ html, html a {
 	-webkit-transition: all 0.2s ease;
 }
 
-@media all and (max-width: 1100px) {
-	.header {
-		width: 600px;
-		height: 360px;
-	}
-}
-
-@media all and (max-width: 800px) {
-	.header {
-		width: 400px;
-		height: 520px;
-	}
-}
-
 /* Styles */
 
 h1 {
-	font-family: 'Bambino';
-	font-size: 4.6rem;
+	font-family: 'CircularStd-Book';
+	font-size: 5rem;
 	font-weight: normal;
-	color: lightgray;
+	color: white;
 }
 
 ul {
@@ -108,50 +94,27 @@ ul {
 
 li {
 	display: inline;
-	font-family: 'Bambino';
+	font-family: 'CircularStd-Book';
 	font-size: 1.6rem;
 	font-weight: normal;
-	line-height: 2.6rem;
-	color: lightgray;
 	list-style: none;
 	margin-right: 30px;
 }
 
-@media all and (max-width: 1100px) {
-	li {
-		display: block;
-		width: 600px;
-		height: 35px;
-		margin: 0;
-	}
-}
-
-@media all and (max-width: 800px) {
-	li {
-		display: block;
-		width: 400px;
-		height: 35px;
-		margin: 0;
-	}
-}
-
-li span {
-	font-family: 'Bambino';
+span {
 	font-size: 1.2rem;
-	font-weight: normal;
-	line-height: 2.6rem;
-	color: gray;
+	color: #0013a5;
 	margin-right: 10px;
 }
 
 a {
-	color: lightgray;
+	color: white;
 	text-decoration: none;
 	-webkit-transition: all 0.2s ease;
 }
 
 a:hover {
-	opacity: .75;
+	opacity: .5;
 	text-decoration: none;
 	-webkit-transition: all 0.2s ease;
 }
@@ -174,4 +137,82 @@ a:hover {
 		
 	}
 
+}
+
+/* Media Queries */
+
+@media all and (max-width: 1100px) {
+	.header {
+		width: 600px;
+		height: 360px;
+	}
+}
+
+@media all and (max-width: 800px) {
+	.header {
+		width: 400px;
+		height: 520px;
+	}
+}
+
+@media all and (max-width: 1100px) {
+	.side {
+		width: 60px;
+		float: left;
+	}
+}
+
+@media all and (max-width: 1100px) {
+	.main {
+		width: 600px;
+	}
+}
+
+@media all and (max-width: 800px) {
+	.main {
+		width: 400px;
+	}
+}
+
+@media all and (max-width: 1100px) {
+	li {
+		display: block;
+		width: 600px;
+		height: 35px;
+	}
+}
+
+@media all and (max-width: 800px) {
+	li {
+		display: block;
+		width: 400px;
+		height: 35px;
+	}
+}
+
+@media only screen 
+    and (min-device-width : 375px) 
+    and (max-device-width : 667px)
+    and (width : 375px)
+    and (height : 559px)
+    and (orientation : portrait) 
+    and (-webkit-min-device-pixel-ratio : 2) {
+
+		html, body, h1, ul, li {
+			font-size: 62.5%;
+		}
+		
+		.header {
+			width: 100%;
+			margin: 40px 0 0 40px;
+			font-size: 6.7rem;
+		}
+		
+		li {
+			font-size: 1.6rem;
+		}
+
+		span {
+			font-size: 1.2rem;
+		}
 }
