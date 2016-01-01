@@ -4,7 +4,7 @@ html, body, h1, ul, li {
 	margin: 0;
 	padding: 0;
 	font-size: 62.5%;
-	background-color: #ffd5d2;
+	background-color: lightgray;
 
 	/* Animation: Fade */
 
@@ -20,7 +20,7 @@ html, body, h1, ul, li {
 /* Text Select */
 
 ::selection {
-	background: lightgray;
+	background: #0013a5;
 }
 
 /* Font Smoothie */
@@ -52,6 +52,13 @@ html, html a {
  	src: url('../fonts/Bambino.otf');
 }
 
+@font-face {
+ 	font-family: 'GT-Walsheim-Regular';
+ 	src: url('../fonts/GT-Walsheim-Regular.eot') format('embedded-opentype'),
+ 		 url('../fonts/GT-Walsheim-Regular.woff') format('woff'),
+ 		 url('../fonts/GT-Walsheim-Regular.ttf') format('truetype');
+}
+
 /* Clear Fix */
 
 .clearfix:after, .clearfix:before {
@@ -73,7 +80,7 @@ html, html a {
 	bottom: 0;
 	right: 0;
 	width: 800px;
-	height: 260px;
+	height: 280px;
 	margin: auto;
 	-webkit-transition: all 0.2s ease;
 }
@@ -81,7 +88,7 @@ html, html a {
 /* Styles */
 
 h1 {
-	font-family: 'CircularStd-Book';
+	font-family: 'GT-Walsheim-Regular';
 	font-size: 5rem;
 	font-weight: normal;
 	color: white;
@@ -94,7 +101,7 @@ ul {
 
 li {
 	display: inline;
-	font-family: 'CircularStd-Book';
+	font-family: 'GT-Walsheim-Regular';
 	font-size: 1.6rem;
 	font-weight: normal;
 	list-style: none;
@@ -102,41 +109,33 @@ li {
 }
 
 span {
-	font-size: 1.2rem;
-	color: #0013a5;
+	font-size: 1.6rem;
+	color: white;
 	margin-right: 10px;
 }
 
 a {
-	color: white;
+	color: #0013a5;
 	text-decoration: none;
-	-webkit-transition: all 0.2s ease;
 }
 
 a:hover {
-	opacity: .5;
+	border-bottom: 1px solid #0013a5;
 	text-decoration: none;
-	-webkit-transition: all 0.2s ease;
 }
 
 /* Animation: Fade */
 
 @-webkit-keyframes fade {
-
 	0% {
-	
 		opacity: 0;
 		/*-webkit-transform: translateY(30px);*/
-		
 	}
-
-	100% {
 	
+	100% {
 		opacity: 1;
 		/*-webkit-transform: translateY(12px);*/
-		
 	}
-
 }
 
 /* Media Queries */
@@ -213,6 +212,6 @@ a:hover {
 		}
 
 		span {
-			font-size: 1.2rem;
+			font-size: 1.6rem;
 		}
 }
